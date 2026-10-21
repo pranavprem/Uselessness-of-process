@@ -1,0 +1,37 @@
+[build-system]
+requires = ["setuptools>=69"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "uselessness-of-process"
+version = "1.0.0"
+description = "Decide whether one software-development process step is worth keeping."
+readme = "README.md"
+requires-python = ">=3.11"
+authors = [{ name = "Pranav Prem" }]
+dependencies = []
+
+[project.optional-dependencies]
+dev = [
+    "pytest==9.1.1",
+    "ruff==0.17.0",
+]
+
+[project.scripts]
+uselessness = "uselessness.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["uselessness*"]
+
+[tool.setuptools.package-data]
+uselessness = ["web/*"]
+
+[tool.ruff]
+target-version = "py311"
+line-length = 88
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

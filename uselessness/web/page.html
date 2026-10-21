@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Usefulness Indexing of Software Development Processes</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <main>
+    <header class="masthead">
+      <p class="eyebrow">Uselessness of process</p>
+      <h1>Usefulness Indexing of Software Development Processes</h1>
+      <p class="lede">
+        Score a single step in the development process. Mark the closest point
+        between No and Yes. Yes means the step looks worth keeping. The step
+        can be removed when the total is 30 or below.
+      </p>
+    </header>
+
+    {{error}}
+    {{result}}
+
+    <form method="post" action="/evaluate">
+      {{questions}}
+      <div class="actions">
+        <button type="submit">Evaluate</button>
+        <p class="hint">Nine questions, each from 0 (No) to 8 (Yes). 4 is the middle.</p>
+      </div>
+    </form>
+  </main>
+</body>
+</html>
